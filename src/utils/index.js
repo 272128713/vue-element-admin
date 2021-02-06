@@ -345,3 +345,13 @@ export function removeClass(ele, cls) {
     ele.className = ele.className.replace(reg, ' ')
   }
 }
+
+/**
+ * htmlTagReg
+ * @param {string} testStr
+ */
+export function htmlTagReg(testStr) {
+  var reg = /(?<=<div>).*(?=<\/div>)/gi;
+  var res = testStr.match(reg);
+  return res
+}
